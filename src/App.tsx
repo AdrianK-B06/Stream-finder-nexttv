@@ -4,9 +4,14 @@ import React, { useState } from "react";
 
 export default function App() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [triggerFetch, setTriggerFetch] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
+  };
+
+  const handleSearch = () => {
+    setTriggerFetch((prev) => !prev);
   };
 
   return (
@@ -26,9 +31,11 @@ export default function App() {
           value={searchTerm}
           onChange={handleInputChange}
         />
-        <button onClick={() => setSearchTerm(searchTerm)}>Search!</button>
+        <button onClick={handleSearch}>Search!</button>
       </main>
-      <MyApi searchTerm={searchTerm} />
+      <div>
+        <MyApi searchTerm={searchTerm} triggerFetch={triggerFetch} />
+      </div>
       <footer>
         <p>“Streaming data powered by Watchmode.com"</p>
       </footer>
