@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
-// import fetch from "node-fetch";
 
 interface MyApiProps {
   searchTerm: string;
+  triggerFetch: boolean;
 }
 
-const MyApi: React.FC<MyApiProps> = ({ searchTerm }) => {
+const MyApi: React.FC<MyApiProps> = ({ searchTerm, triggerFetch }) => {
   const [apiData, setApiData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = `https://api.watchmode.com/v1/title/${searchTerm}/details/?apiKey=unwb8JLwwmPPn4n85XoWSfONMETX2o6pUvNleq0L`;
+        const apiKey = process.env.REACT_APP_WATCHMODE_API_KEY;
+        const url = `https://api.watchmode.com/v1/title/${encodeURIComponent(
+          searchTerm
+        )}/details/?apiKey=${apiKey}`;
+
         console.log("Request URL:", url);
 
         const response = await fetch(url, { method: "GET" });
@@ -30,15 +34,16 @@ const MyApi: React.FC<MyApiProps> = ({ searchTerm }) => {
       }
     };
 
-    fetchData();
-  }, [searchTerm]); // Run the effect whenever the searchTerm changes
+    if (searchTerm) {
+      fetchData();
+    }
+  }, [searchTerm, triggerFetch]);
 
   return (
     <div>
       {apiData && (
         <div>
           <h2>API Results</h2>
-          {/* Render the API results here */}
           <pre>{JSON.stringify(apiData, null, 2)}</pre>
         </div>
       )}
