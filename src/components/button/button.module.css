@@ -1,0 +1,29 @@
+/* --------Button-Mobile---------- */
+
+.searchBtn {
+  margin-top: 1.5rem;
+  width: 70%;
+  padding: 7px 0px 8px 0px;
+  border-radius: 5px;
+  background: #4561a8;
+  color: whitesmoke;
+  text-align: center;
+  font-family: Gill Sans;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 82.198%;
+  border: none;
+  cursor: pointer;
+}
+
+.searchBtn:hover {
+  background-color: whitesmoke;
+  color: #4561a8;
+  outline: 3px solid #4561a8;
+  outline-offset: -3px;
+}
+
+.searchBtn:active {
+  position: relative;
+  top: 1px;
+}
