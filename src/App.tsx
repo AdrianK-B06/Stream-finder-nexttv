@@ -12,7 +12,6 @@ export default function App() {
         <SearchBar />
         <Button />
       </main>
-
       <Footer />
     </div>
   );
