@@ -1,8 +1,9 @@
 import "./App.css";
 import Hero from "./components/hero/Hero";
 import SearchBar from "./components/searchBar/SearchBar";
-import Button from "./components/button/Button";
+
 import Footer from "./components/footer/Footer";
+import AutocompleteSearch from "./components/SearchLogic/AutocompleteSearch";
 
 export default function App() {
   return (
@@ -10,7 +11,7 @@ export default function App() {
       <main>
         <Hero />
         <SearchBar />
-        <Button />
+        <AutocompleteSearch />
       </main>
       <Footer />
     </div>
