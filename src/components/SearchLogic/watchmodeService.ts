@@ -5,6 +5,7 @@ const API_KEY = "unwb8JLwwmPPn4n85XoWSfONMETX2o6pUvNleq0L";
 
 export interface AutocompleteResult {
   title: string;
+  id: number;
 }
 
 export interface AutocompleteResponse {

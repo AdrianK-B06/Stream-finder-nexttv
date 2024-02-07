@@ -1,0 +1,8 @@
+.resultsList {
+  padding: 0;
+}
+
+.resultItem {
+  margin: 10px 0;
+  list-style-type: none;
+}
