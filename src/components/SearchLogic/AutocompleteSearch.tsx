@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { autocompleteSearch, AutocompleteResponse } from "./watchmodeService";
 import Button from "../button/Button";
+import SearchResult from "../searchResults/SearchResult";
 
 const AutocompleteSearch: React.FC = () => {
   const [query, setQuery] = useState<string>("");
@@ -26,11 +27,8 @@ const AutocompleteSearch: React.FC = () => {
         placeholder="Search..."
       />
       <Button onClick={handleSearch} />
-      <ul>
-        {results.map((result, index) => (
-          <li key={index}>{result.title}</li>
-        ))}
-      </ul>
+
+      <SearchResult results={results} />
     </div>
   );
 };
