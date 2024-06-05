@@ -1,8 +1,12 @@
 .resultsList {
-  padding: 0;
+  padding: 2px;
 }
 
 .resultItem {
+  color: #fff;
   margin: 10px 0;
-  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  font-size: 16px; /* Adjust as needed */
+  font-weight: normal;
 }

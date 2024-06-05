@@ -6,7 +6,7 @@
 }
 
 .find {
-  font-size: 38px;
+  font-size: 10vmax;
   font-style: normal;
   font-weight: 700;
   line-height: 81.619%;
@@ -16,7 +16,7 @@
 
 .your {
   color: #4561a8;
-  font-size: 38px;
+  font-size: 10vmax;
   font-style: normal;
   font-weight: 700;
   line-height: 81.619%;
@@ -25,7 +25,7 @@
 }
 
 .tv {
-  font-size: 47px;
+  font-size: 12vmax;
   font-style: normal;
   font-weight: 700;
   line-height: 81.619%;
@@ -34,7 +34,7 @@
 }
 
 .adventure {
-  font-size: 35px;
+  font-size: 8.8vmax;
   font-style: normal;
   font-weight: 700;
   line-height: 81.619%;
